@@ -594,7 +594,9 @@ footer a:visited {
         font-size: 1em; /* Уменьшаем размер текста */
     }
 }
-
+.hero-content {
+  text-align: center;
+}
 
 
 
