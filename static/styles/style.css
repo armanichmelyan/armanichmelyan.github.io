@@ -1,250 +1,239 @@
-
+/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a;
+    background-color: #121212;
     color: #fff;
-    transition: background-color 0.3s ease;
+    line-height: 1.6;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 0 15px;
 }
 
-/* ---------- Header ---------- */
+section {
+    padding: 60px 0;
+}
 
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    text-shadow: 1px 1px 2px #000;
+}
+p{
+    color: #ccc;
+}
+/ ---------- Header ---------- /
 header {
-    background-color: #252525;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    background-color: #1a1a1a;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 .logo {
     display: flex;
     align-items: center;
 }
-
-.logo img {
-    margin-right: 10px;
+.logo img{
+    margin-right: 15px;
 }
-
-.logo h1 {
-    margin: 0;
-    font-size: 1.5em;
-    color: #fff;
+.logo h1{
+    font-size: 1.3em;
 }
-
 .nav-links {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
 }
-
-.nav-links li {
-    margin-left: 20px;
+.nav-links li{
+    margin-left: 25px;
 }
-
-.nav-links li a {
+.nav-links h3{
+    margin-bottom: 0;
+}
+.nav-links a {
+    color: #fff;
     text-decoration: none;
-    color: #ccc;
-    font-weight: 500;
     transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
+.nav-links a:hover {
     color: #007bff;
 }
-.search-container {
-    display: flex;
-    align-items: center;
-}
-
-.search-container input[type="text"] {
-    padding: 8px;
-    border: none;
-    border-radius: 5px 0 0 5px;
-     background-color: #333;
-    color: #ccc;
-}
-
-.search-container button {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-     transition: background-color 0.3s ease;
-}
-.search-container button:hover {
-   background-color: #0056b3;
-}
-
-.lang-switcher {
-    margin-left: 20px;
-    display: flex;
-}
-
-.lang-switcher button {
-    border: none;
-    background-color: transparent;
-    color: #ccc;
-    cursor: pointer;
-    font-size: 1em;
-     margin-left: 5px;
-    padding: 5px;
-      transition: color 0.3s ease;
-}
-
-.lang-switcher button:hover {
-   color: #007bff;
-}
-.lang-switcher button.active-lang {
-    color: #fff;
-    font-weight: bold;
-}
-/* ---------- Hero ---------- */
-
+/ ---------- Hero ---------- /
 #hero {
     background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
-    padding: 60px 0;
-    margin-bottom: 30px;
+    padding: 100px 0;
 }
 
 #hero .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .hero-content {
-    max-width: 50%;
+    flex: 1;
+    margin-right: 20px;
 }
-
 .hero-content h1 {
-    font-size: 3em;
-    color: #fff;
+    font-size: 2.5em;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px #000;
 }
 .hero-subtitle {
     font-size: 1.2em;
-    color: #ccc;
-    margin-bottom: 30px;
     line-height: 1.5;
+    max-width: 80%;
 }
 
-.hero-image img {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.hero-image img:hover {
-   transform: scale(1.05);
-}
-
-/* ---------- Common Styles ---------- */
-
-.section {
-    padding: 50px 0;
-    transition: background-color 0.3s ease;
-}
-
-.section h2 {
+.hero-image {
+    flex: 1;
     text-align: center;
-    margin-bottom: 30px;
-    color: #fff;
-    font-size: 2.2em;
-    border-bottom: 2px solid #444;
-    padding-bottom: 10px;
-    display: inline-block;
-    width: auto;
-    text-shadow: 1px 1px 2px #000;
 }
-.section h3{
-     color: #fff;
-    margin-top: 25px;
-    margin-bottom: 15px;
-     font-size: 1.5em;
-      text-shadow: 1px 1px 2px #000;
+.hero-image img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
-.section p {
-    line-height: 1.6;
-    color: #ccc;
-    margin-bottom: 20px;
-    font-size: 1.1em;
+/ ---------- About ---------- /
+#about {
+    background-color: #252525;
+     box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.3);
 }
-.section ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.section li {
-     margin-bottom: 10px;
-    font-size: 1em;
-    color: #ccc;
-}
-.direction-description{
-    font-size: 1.2em;
-    color: #ccc;
-    margin-bottom: 30px;
-    line-height: 1.5;
-}
-.contact-phone {
-    font-size: 1.2em;
-    color: #ccc;
-    margin-top: 30px;
-}
-.subjects, .professions {
-    margin-top: 15px;
-     padding-left: 20px;
-}
-/* ---------- About ---------- */
-
-#about .container {
-    text-align: center;
+#about .container{
+   text-align: center;
 }
 .about-text{
-     font-size: 1.2em;
-    color: #ccc;
-    margin-bottom: 20px;
+    font-size: 1.2em;
+    max-width: 80%;
+    margin: 2em auto;
     line-height: 1.5;
 }
 .school-image {
-    margin-top: 30px;
-     display: flex;
-     justify-content: center;
+    text-align: center;
+    margin-top: 20px;
 }
-#about img {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+.school-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     transition: transform 0.3s ease;
 }
-
-#about img:hover{
-    transform: scale(1.05);
+.school-image img:hover{
+     transform: scale(1.05);
+}
+/ ---------- Direction ---------- /
+.direction-description{
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    line-height: 1.4;
+    text-align: left;
+}
+.subjects {
+    margin-bottom: 2em;
+    padding-left: 20px;
+    text-align: left;
+    line-height: 1.5;
+}
+.subjects li{
+    list-style-type: disc;
+    margin-bottom: 0.5em;
+}
+.professions {
+    margin-bottom: 2em;
+    padding-left: 20px;
+    text-align: left;
+    line-height: 1.5;
+}
+.professions li{
+    list-style-type: disc;
+    margin-bottom: 0.5em;
+}
+.contact-phone {
+     font-size: 1.1em;
+      text-align: left;
+}
+.contact-phone a{
+    text-decoration: none;
+    color: #007bff;
+}
+.contact-phone a:hover{
+     text-decoration: underline;
+    color: #0056b3;
+}
+.contact-phone span{
+    font-weight: bold;
+}
+/* ---------- Style of index.html page ---------- */
+.direction-card a{
+    margin-top: 15px;
+}
+/* ---------- Style of pages of direction ---------- */
+.section .container {
+    text-align: center;
+     padding: 20px;
+    background-color: #252525;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 10px;
 }
 
+/* Style for the form */
+.contact-form-modal .container{
+     background-color: #333;
+    padding: 30px;
+}
+.contact-form-modal form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.contact-form-modal label {
+    margin-bottom: 5px;
+    text-align: left;
+}
+.contact-form-modal input,
+.contact-form-modal textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+     border: 1px solid #555;
+     border-radius: 5px;
+    background-color: #444;
+    color: #ccc;
+}
+.contact-form-modal textarea {
+   resize: vertical;
+   min-height: 100px;
+}
+.contact-form-modal .btn{
+    align-self: center;
+}
+/* ------------- End style of contact form ----------*/
+modal {     display: none; /* Hidden by default */     position: fixed; /* Stay in place */     z-index: 1; /* Sit on top */     left: 0;     top: 0;     width: 100%; /* Full width */     height: 100%; /* Full height */     overflow: auto; /* Enable scroll if needed */     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */ }  /* Modal Content/Box */ .modal-content {     background-color: #333;     margin: 15% auto;     padding: 20px;     border: 1px solid #888;     width: 80%;     border-radius: 10px;      position: relative;   }  .modal-content h2{   margin-top: 0; } .modal-content img {     max-width: 100%;     height: auto;     border-radius: 10px; } /* Close Button */ .close {     color: #aaa;     float: right;     font-size: 28px;     font-weight: bold;      position: absolute;      right: 15px;    top: 5px; }  .close:hover, .close:focus {     color: black;     text-decoration: none;     cursor: pointer; }
 /* ---------- Directions ---------- */
 #directions {
     background-color: #252525;
     box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.3);
 }
+
 #directions .container {
     margin-top: 30px;
     text-align: center;
@@ -262,12 +251,13 @@ nav {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-     transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .direction-card:hover {
-     transform: translateY(-5px);
+    transform: translateY(-5px);
 }
+
 .direction-card img {
     width: 100%;
     height: auto;
@@ -276,15 +266,14 @@ nav {
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
 }
-.direction-card img:hover {
+.direction-card img:hover{
      transform: scale(1.05);
 }
-
 .direction-card h3 {
     margin-bottom: 15px;
     color: #fff;
     font-size: 1.7em;
-    text-shadow: 1px 1px 2px #000;
+     text-shadow: 1px 1px 2px #000;
 }
 
 .direction-card  p {
@@ -293,30 +282,28 @@ nav {
     color: #ccc;
      line-height: 1.4;
 }
-
 /* ---------- Useful Links ---------- */
-
 #useful-links {
-  background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
-    }
-    #useful-links .container{
-            text-align: center;
-           display: flex;
-            flex-direction: column;
-           align-items: center;
-        }
+    background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+}
+#useful-links .container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    #useful-links .container h2,
-    #useful-links .container .useful-text{
-        max-width: 80%;
-        margin: 0.5em 0;
-      }
+#useful-links .container h2,
+#useful-links .container .useful-text{
+    max-width: 80%;
+    margin: 0.5em 0;
+}
 
-    #useful-links .link-list {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 60%;
-        }
+#useful-links .link-list {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+}
 .link-list {
     margin-top: 30px;
     list-style-type: none;
@@ -338,10 +325,10 @@ nav {
     text-decoration: underline;
     color: #0056b3;
 }
- /* ---------- FAQ ---------- */
+/* ---------- FAQ ---------- */
 #faq {
     background-color: #252525;
-      box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.3);
+    box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.3);
 }
 #faq .container{
     text-align: center;
@@ -362,17 +349,17 @@ nav {
 .faq-question {
     font-size: 1.2em;
     font-weight: bold;
-     color: #fff;
+    color: #fff;
     margin-bottom: 10px;
-     cursor: pointer;
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
-     align-items: center;
-     transition: color 0.3s ease;
+    align-items: center;
+    transition: color 0.3s ease;
 }
 
 .faq-question:hover{
-      color: #007bff;
+    color: #007bff;
 }
 .faq-question::after {
     content: '+';
@@ -398,7 +385,7 @@ nav {
     background-color: #252525;
     padding: 50px 0;
     text-align: center;
-     box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.3);
+    box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.3);
 }
 .contacts-text{
     font-size: 1.2em;
@@ -413,9 +400,7 @@ nav {
     margin-top: 20px;
 }
 
-
 /* ---------- Footer ---------- */
-
 footer {
     background-color: #1a1a1a;
     color: #fff;
@@ -435,11 +420,9 @@ footer a:hover {
     color: #007bff;
 }
 footer a:visited {
-   color: #007bff;
+    color: #007bff;
 }
-
 /* ---------- Button ---------- */
-
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -455,7 +438,6 @@ footer a:visited {
 }
 
 /* ---------- Modal ---------- */
-
 .modal {
     display: none;
     position: fixed;
@@ -487,8 +469,7 @@ footer a:visited {
     cursor: pointer;
 }
 
-.modal-content .close:hover,
-.modal-content .close:focus {
+.modal-content .close:hover, .modal-content .close:focus {
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -511,9 +492,7 @@ footer a:visited {
     margin-bottom: 5px;
     color: #ccc;
 }
-.modal-content input[type="text"],
-.modal-content input[type="email"],
-.modal-content textarea {
+.modal-content input[type="text"], .modal-content input[type="email"], .modal-content textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #555;
@@ -524,21 +503,21 @@ footer a:visited {
 .modal-content .anon-check{
     display: flex;
     align-items: center;
-     margin-top: 15px;
+    margin-top: 15px;
 }
 .modal-content .anon-check input{
-   width: auto;
-     margin-right: 5px;
+    width: auto;
+    margin-right: 5px;
 }
 .social-buttons {
     position: fixed;
     top: 50%;
     right: 20px;
-     transform: translateY(-50%);
+    transform: translateY(-50%);
     display: flex;
-     flex-direction: column;
+    flex-direction: column;
     gap: 10px;
-     z-index: 101;
+    z-index: 101;
 }
 .social-button {
     display: flex;
@@ -547,24 +526,25 @@ footer a:visited {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-     font-size: 1.2em;
+    font-size: 1.2em;
     text-decoration: none;
     color: #fff;
     transition: all 0.3s ease;
 }
 .social-button.facebook {
-   background-color: #3b5998;
+    background-color: #3b5998;
 }
 .social-button.twitter {
-   background-color: #1da1f2;
+    background-color: #1da1f2;
 }
 .social-button.instagram {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 .social-button:hover {
-      transform: scale(1.1);
+    transform: scale(1.1);
     opacity: 0.8;
 }
+
 /* ---------- Media Queries (Responsive) ---------- */
 @media (max-width: 768px) {
     .container {
@@ -595,6 +575,9 @@ footer a:visited {
     .hero-image img {
         width: 80%;
     }
+     .school-image img {
+         width: 80%;
+     }
     .direction-card {
         margin-bottom: 20px;
     }
@@ -602,7 +585,14 @@ footer a:visited {
         align-items: start;
     }
     .social-buttons {
-    right: 10px;
+        right: 10px;
+    }
+    .direction-card img {
+        margin-bottom: 10px; /* Уменьшаем отступ между картинкой и текстом */
+    }
+     .direction-card p {
+        font-size: 1em; /* Уменьшаем размер текста */
     }
 }
+
 
