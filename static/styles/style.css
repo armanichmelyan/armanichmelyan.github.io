@@ -127,8 +127,8 @@ nav {
 
 #hero .container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .hero-content {
@@ -147,12 +147,9 @@ nav {
     margin-bottom: 30px;
     line-height: 1.5;
 }
-.hero-image {
-    flex: 1;
-    text-align: center;
-}
+
 .hero-image img {
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
 }
@@ -160,7 +157,6 @@ nav {
 .hero-image img:hover {
    transform: scale(1.05);
 }
-
 
 / ---------- Common Styles ---------- /
 
