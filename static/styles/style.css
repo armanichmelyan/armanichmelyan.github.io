@@ -574,8 +574,7 @@ footer a:visited {
 
     .hero-content {
         max-width: 100%;
-        margin-bottom: 20px;
-         margin-right: 0px;
+        margin-bottom: 30px;
     }
     .hero-image img {
         width: 90%;
@@ -598,9 +597,6 @@ footer a:visited {
     .direction-card p {
         font-size: 0.9em; /* Уменьшаем размер текста */
     }
-}
-.hero-content {
-  text-align: center;
 }
 
 
