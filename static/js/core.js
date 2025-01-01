@@ -67,7 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     //Modal for timetable chem-bio
-    const scheduleModalChemBio = document.getElementById('scheduleModalChemBio');    const openScheduleModalChemBio = document.getElementById('openScheduleModalChemBio');
+    const scheduleModalChemBio = document.getElementById('scheduleModalChemBio');
+        const openScheduleModalChemBio = document.getElementById('openScheduleModalChemBio');
     const closeScheduleModalChemBioSpan = scheduleModalChemBio ? scheduleModalChemBio.querySelector('.close') : null;
     if(openScheduleModalChemBio){
         openScheduleModalChemBio.onclick = function() {
