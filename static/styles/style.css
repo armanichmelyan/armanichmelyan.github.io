@@ -1,537 +1,613 @@
-ss
-/ Сброс базовых отступов (по желанию) /
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #1a1a1a;
-  color: #fff;
-  transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+    transition: background-color 0.3s ease;
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
 / ---------- Header ---------- /
+
 header {
-  background-color: #252525;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+    background-color: #252525;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .logo h1 {
-  margin: 0;
-  font-size: 1.5em;
-  color: #fff;
+    margin: 0;
+    font-size: 1.5em;
+    color: #fff;
 }
 
-/ Навигация /
 .nav-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;      / По умолчанию на ПК /
-  transition: max-height 0.3s ease;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 .nav-links li {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 .nav-links li a {
-  text-decoration: none;
-  color: #ccc;
-  font-weight: 500;
-  transition: color 0.3s ease;
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #007bff;
+    color: #007bff;
+}
+.search-container {
+    display: flex;
+    align-items: center;
 }
 
-/ Гамбургер /
-.hamburger {
-  display: none;           / Скрыт на ПК /
-  flex-direction: column;
-  cursor: pointer;
-  width: 30px;
-  height: 24px;
-  justify-content: space-between;
+.search-container input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+     background-color: #333;
+    color: #ccc;
 }
 
-.hamburger span {
-  display: block;
-  height: 3px;
-  background: #fff;
-  border-radius: 3px;
+.search-container button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+     transition: background-color 0.3s ease;
+}
+.search-container button:hover {
+   background-color: #0056b3;
 }
 
-/ Анимация «крестика» /
-.hamburger.active span:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
+.lang-switcher {
+    margin-left: 20px;
+    display: flex;
 }
 
-/ Меню при открытии (active) на мобильном /
-.nav-links.active {
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  flex-direction: column;
-  background-color: #333;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+.lang-switcher button {
+    border: none;
+    background-color: transparent;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 1em;
+     margin-left: 5px;
+    padding: 5px;
+      transition: color 0.3s ease;
 }
 
-.nav-links.active li {
-  margin: 10px 0;
-  text-align: right;
+.lang-switcher button:hover {
+   color: #007bff;
 }
-
+.lang-switcher button.active-lang {
+    color: #fff;
+    font-weight: bold;
+}
 / ---------- Hero ---------- /
+
 #hero {
-  background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
-  padding: 60px 0;
-  margin-bottom: 30px;
+    background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+    padding: 60px 0;
+    margin-bottom: 30px;
 }
 
 #hero .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .hero-content {
-  max-width: 50%;
+    max-width: 50%;
 }
 
 .hero-content h1 {
-  font-size: 3em;
-  color: #fff;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px #000;
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000;
 }
-
 .hero-subtitle {
-  font-size: 1.2em;
-  color: #ccc;
-  margin-bottom: 30px;
-  line-height: 1.5;
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 30px;
+    line-height: 1.5;
 }
 
 .hero-image img {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
 }
 
 .hero-image img:hover {
-  transform: scale(1.05);
+   transform: scale(1.05);
 }
 
-/ ---------- Common Styles (Sections) ---------- /
+/ ---------- Common Styles ---------- /
+
 .section {
-  padding: 50px 0;
-  transition: background-color 0.3s ease;
+    padding: 50px 0;
+    transition: background-color 0.3s ease;
 }
 
 .section h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #fff;
-  font-size: 2.2em;
-  border-bottom: 2px solid #444;
-  padding-bottom: 10px;
-  display: inline-block;
-  width: auto;
-  text-shadow: 1px 1px 2px #000;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 2.2em;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    display: inline-block;
+    width: auto;
+    text-shadow: 1px 1px 2px #000;
 }
-
-.section h3 {
-  color: #fff;
-  margin-top: 25px;
-  margin-bottom: 15px;
-  font-size: 1.5em;
-  text-shadow: 1px 1px 2px #000;
+.section h3{
+     color: #fff;
+    margin-top: 25px;
+    margin-bottom: 15px;
+     font-size: 1.5em;
+      text-shadow: 1px 1px 2px #000;
 }
-
 .section p {
-  line-height: 1.6;
-  color: #ccc;
-  margin-bottom: 20px;
-  font-size: 1.1em;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 20px;
+    font-size: 1.1em;
 }
-
 .section ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
-
 .section li {
-  margin-bottom: 10px;
-  font-size: 1em;
-  color: #ccc;
+     margin-bottom: 10px;
+    font-size: 1em;
+    color: #ccc;
 }
-
-.direction-description {
-  font-size: 1.2em;
-  color: #ccc;
-  margin-bottom: 30px;
-  line-height: 1.5;
+.direction-description{
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 30px;
+    line-height: 1.5;
 }
-
 .contact-phone {
-  font-size: 1.2em;
-  color: #ccc;
-  margin-top: 30px;
+    font-size: 1.2em;
+    color: #ccc;
+    margin-top: 30px;
 }
-
-.subjects,
-.professions {
-  margin-top: 15px;
-  padding-left: 20px; / для отступа списков /
+.subjects, .professions {
+    margin-top: 15px;
+     padding-left: 20px;
 }
+/ ---------- About ---------- /
 
-/ ---------- About (пример) ---------- /
 #about .container {
-  text-align: center;
+    text-align: center;
 }
-
-.about-text {
-  font-size: 1.2em;
-  color: #ccc;
-  margin-bottom: 20px;
-  line-height: 1.5;
+.about-text{
+     font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
-
 .school-image {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
+    margin-top: 30px;
+     display: flex;
+     justify-content: center;
 }
-
 #about img {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
 }
 
-#about img:hover {
-  transform: scale(1.05);
+#about img:hover{
+    transform: scale(1.05);
 }
 
 / ---------- Directions ---------- /
 #directions {
-  background-color: #252525;
-  box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.3);
+    background-color: #252525;
+    box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.3);
 }
-
 #directions .container {
-  margin-top: 30px;
-  text-align: center;
+    margin-top: 30px;
+    text-align: center;
 }
 
 .directions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
 .direction-card {
-  background-color: #333;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+     transition: transform 0.3s ease;
 }
 
 .direction-card:hover {
-  transform: translateY(-5px);
+     transform: translateY(-5px);
 }
-
 .direction-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
 }
-
 .direction-card img:hover {
-  transform: scale(1.05);
+     transform: scale(1.05);
 }
 
 .direction-card h3 {
-  margin-bottom: 15px;
-  color: #fff;
-  font-size: 1.7em;
-  text-shadow: 1px 1px 2px #000;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 1.7em;
+    text-shadow: 1px 1px 2px #000;
 }
 
-.direction-card p {
-  margin-bottom: 15px;
-  text-align: left;
-  color: #ccc;
-  line-height: 1.4;
+.direction-card  p {
+    margin-bottom: 15px;
+    text-align: left;
+    color: #ccc;
+     line-height: 1.4;
 }
 
 / ---------- Useful Links ---------- /
+
 #useful-links {
   background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
-}
+    }
+    #useful-links .container{
+            text-align: center;
+           display: flex;
+            flex-direction: column;
+           align-items: center;
+        }
 
-#useful-links .container {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    #useful-links .container h2,
+    #useful-links .container .useful-text{
+        max-width: 80%;
+        margin: 0.5em 0;
+      }
 
-#useful-links .container h2,
-#useful-links .container .useful-text {
-  max-width: 80%;
-  margin: 0.5em 0;
-}
-
-#useful-links .link-list {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 60%;
-}
-
+    #useful-links .link-list {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 60%;
+        }
 .link-list {
-  margin-top: 30px;
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+    margin-top: 30px;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .link-list li a {
-  color: #007bff;
-  text-decoration: none;
-  font-size: 1.1em;
-  transition: color 0.3s ease;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
 .link-list li a:hover {
-  text-decoration: underline;
-  color: #0056b3;
+    text-decoration: underline;
+    color: #0056b3;
+}
+/ ---------- FAQ ---------- /
+#faq {
+    background-color: #252525;
+      box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.3);
+}
+#faq .container{
+    text-align: center;
+}
+.faq-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+.faq-item {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.faq-question {
+    font-size: 1.2em;
+    font-weight: bold;
+     color: #fff;
+    margin-bottom: 10px;
+     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+     align-items: center;
+     transition: color 0.3s ease;
 }
 
+.faq-question:hover{
+      color: #007bff;
+}
+.faq-question::after {
+    content: '+';
+    font-size: 1.5em;
+}
+.faq-question.active::after {
+    content: '-';
+}
+.faq-answer {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #ccc;
+    display: none;
+    padding-top: 10px;
+    border-top: 1px solid #555;
+}
+
+.faq-answer.active {
+    display: block;
+}
 / ---------- Contacts ---------- /
 #contacts {
-  background-color: #252525;
-  padding: 50px 0;
-  text-align: center;
-  box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.3);
+    background-color: #252525;
+    padding: 50px 0;
+    text-align: center;
+     box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.3);
 }
-
-.contacts-text {
-  font-size: 1.2em;
-  color: #ccc;
-  margin-bottom: 20px;
-  line-height: 1.5;
+.contacts-text{
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 #contacts address {
-  font-style: normal;
-  line-height: 1.7;
-  margin-top: 20px;
+    font-style: normal;
+    line-height: 1.7;
+    margin-top: 20px;
 }
 
+
 / ---------- Footer ---------- /
+
 footer {
-  background-color: #1a1a1a;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 footer a {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 footer a:hover {
-  color: #007bff;
+    color: #007bff;
 }
-
 footer a:visited {
-  color: #007bff;
+   color: #007bff;
 }
 
 / ---------- Button ---------- /
+
 .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
 / ---------- Modal ---------- /
+
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.7);
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
 }
 
 .modal-content {
-  background-color: #2c2c2c;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #555;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 10px;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    background-color: #2c2c2c;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #555;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }
-
 .modal-content .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .modal-content .close:hover,
 .modal-content .close:focus {
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
 }
-
 .modal-content h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #fff;
-  font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 2em;
 }
-
-/ Если есть формы внутри модалок /
 .modal-content form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
-
 .modal-content .form-group {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
-
 .modal-content label {
-  display: block;
-  margin-bottom: 5px;
-  color: #ccc;
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
 }
-
 .modal-content input[type="text"],
 .modal-content input[type="email"],
 .modal-content textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #555;
-  border-radius: 5px;
-  background-color: #333;
-  color: #fff;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
 }
-
+.modal-content .anon-check{
+    display: flex;
+    align-items: center;
+     margin-top: 15px;
+}
+.modal-content .anon-check input{
+   width: auto;
+     margin-right: 5px;
+}
+.social-buttons {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+     transform: translateY(-50%);
+    display: flex;
+     flex-direction: column;
+    gap: 10px;
+     z-index: 101;
+}
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+     font-size: 1.2em;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.social-button.facebook {
+   background-color: #3b5998;
+}
+.social-button.twitter {
+   background-color: #1da1f2;
+}
+.social-button.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+.social-button:hover {
+      transform: scale(1.1);
+    opacity: 0.8;
+}
 / ---------- Media Queries (Responsive) ---------- /
 @media (max-width: 768px) {
-  .container {
-    width: 95%;
-  }
+    .container {
+        width: 95%;
+    }
+    nav{
+        flex-direction: column;
+    }
+    .logo h1{
+        font-size: 1.3em;
+    }
+    .nav-links{
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .nav-links li{
+        margin: 5px 0;
+    }
+    #hero .container {
+        flex-direction: column;
+        text-align: center; / чтобы картинка и текст шли по центру /
+    }
 
-  .hamburger {
-    display: flex; / Показываем гамбургер на мобильных /
-  }
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .hero-image img {
+        width: 80%;
+    }
+    .direction-card {
+        margin-bottom: 20px;
+    }
+    #useful-links .link-list {
+        align-items: start;
+    }
+    .social-buttons {
+      right: 10px;
+    }
 
-  / Скрываем (сворачиваем) меню, пока не кликнут на гамбургер /
-  .nav-links {
-    max-height: 0;
-    overflow: hidden;
-  }
-
-  .nav-links.active {
-    max-height: 1000px; / Достаточно большое число для всего списка /
-  }
-
-  #hero .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-content {
-    max-width: 100%;
-    margin-bottom: 30px;
-  }
-
-  .hero-image img {
-    width: 80%;
-  }
-
-  .direction-card {
-    margin-bottom: 20px;
-  }
-
-  #useful-links .link-list {
-    align-items: flex-start;
-  }
+    / --- Новое правило, центрирующее текст в .hero-content при телефоне --- /
+    .hero-content {
+        text-align: center;
+    }
 }
-
 
 
 
