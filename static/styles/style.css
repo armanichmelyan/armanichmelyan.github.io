@@ -78,28 +78,30 @@ nav {
 / ---------- Hero ---------- /
 #hero {
     background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
-    padding: 100px 0;
+    padding: 60px 0;
+    margin-bottom: 30px;
 }
 
 #hero .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .hero-content {
-    flex: 1;
-    margin-right: 20px;
+     max-width: 80%;
 }
 .hero-content h1 {
-    font-size: 2.5em;
+    font-size: 3em;
+    color: #fff;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000;
 }
 .hero-subtitle {
     font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 30px;
     line-height: 1.5;
-    max-width: 80%;
 }
 
 .hero-image {
