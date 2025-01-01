@@ -1,120 +1,143 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // ---- Плавная прокрутка для всех ссылок-якорей ----
+    // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
-  
-    // ---- Гамбургер-меню ----
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const navLinks = document.getElementById('navLinks');
-  
-    if (hamburgerBtn && navLinks) {
-      hamburgerBtn.addEventListener('click', function() {
-        hamburgerBtn.classList.toggle('active');
-        navLinks.classList.toggle('active');
-      });
-    }
-  
-    // ---- Универсальные функции открытия/закрытия модалок ----
+
+    // Function to open a modal
     function openModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.style.display = 'block';
-      }
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = "block";
+        }
     }
-  
+
+    // Function to close a modal
     function closeModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.style.display = 'none';
-      }
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = "none";
+        }
     }
-  
-    // ==== Пример: Модалка для физ-мат (phys_math.html) ====
+
+    // Modal for contact form
+    const contactModal = document.getElementById('contactModal');
+    const openContactModalButton = document.getElementById('openContactModal');
+    const closeContactModalSpan = contactModal ? contactModal.querySelector('.close') : null;
+    if (openContactModalButton) {
+        openContactModalButton.onclick = function() {
+            openModal('contactModal');
+        };
+    }
+    if (closeContactModalSpan) {
+        closeContactModalSpan.onclick = function() {
+            closeModal('contactModal');
+        };
+    }
+
+    window.onclick = function(event) {
+        if (event.target === contactModal) {
+            closeModal('contactModal');
+        }
+    };
+
+    // Modal for timetable phys-math
     const scheduleModalPhysMath = document.getElementById('scheduleModalPhysMath');
     const openScheduleModalPhysMath = document.getElementById('openScheduleModalPhysMath');
+    const closeScheduleModalPhysMathSpan = scheduleModalPhysMath ? scheduleModalPhysMath.querySelector('.close') : null;
+
     if (openScheduleModalPhysMath) {
-      openScheduleModalPhysMath.onclick = function() {
-        openModal('scheduleModalPhysMath');
-      };
+        openScheduleModalPhysMath.onclick = function() {
+            openModal('scheduleModalPhysMath');
+        };
     }
-    if (scheduleModalPhysMath) {
-      const closeBtn = scheduleModalPhysMath.querySelector('.close');
-      if (closeBtn) {
-        closeBtn.onclick = () => closeModal('scheduleModalPhysMath');
-      }
+    if (closeScheduleModalPhysMathSpan) {
+        closeScheduleModalPhysMathSpan.onclick = function() {
+            closeModal('scheduleModalPhysMath');
+        };
     }
-  
-    // Клик снаружи закрывает модалку
-    window.addEventListener('click', function(event) {
-      if (event.target === scheduleModalPhysMath) {
-        closeModal('scheduleModalPhysMath');
-      }
-    });
-  
-    // ==== Аналогично: Модалка для chem_bio ====
+    window.onclick = function(event) {
+        if (event.target === scheduleModalPhysMath) {
+            closeModal('scheduleModalPhysMath');
+        }
+    };
+
+    // Modal for timetable chem-bio
     const scheduleModalChemBio = document.getElementById('scheduleModalChemBio');
     const openScheduleModalChemBio = document.getElementById('openScheduleModalChemBio');
+    const closeScheduleModalChemBioSpan = scheduleModalChemBio ? scheduleModalChemBio.querySelector('.close') : null;
+
     if (openScheduleModalChemBio) {
-      openScheduleModalChemBio.onclick = function() {
-        openModal('scheduleModalChemBio');
-      };
+        openScheduleModalChemBio.onclick = function() {
+            openModal('scheduleModalChemBio');
+        };
     }
-    if (scheduleModalChemBio) {
-      const closeBtn = scheduleModalChemBio.querySelector('.close');
-      if (closeBtn) {
-        closeBtn.onclick = () => closeModal('scheduleModalChemBio');
-      }
+    if (closeScheduleModalChemBioSpan) {
+        closeScheduleModalChemBioSpan.onclick = function() {
+            closeModal('scheduleModalChemBio');
+        };
     }
-    window.addEventListener('click', function(event) {
-      if (event.target === scheduleModalChemBio) {
-        closeModal('scheduleModalChemBio');
-      }
-    });
-  
-    // ==== Модалка для soc_econ ====
+    window.onclick = function(event) {
+        if (event.target === scheduleModalChemBio) {
+            closeModal('scheduleModalChemBio');
+        }
+    };
+
+    // Modal for timetable soc-econ
     const scheduleModalSocEcon = document.getElementById('scheduleModalSocEcon');
     const openScheduleModalSocEcon = document.getElementById('openScheduleModalSocEcon');
+    const closeScheduleModalSocEconSpan = scheduleModalSocEcon ? scheduleModalSocEcon.querySelector('.close') : null;
+
     if (openScheduleModalSocEcon) {
-      openScheduleModalSocEcon.onclick = function() {
-        openModal('scheduleModalSocEcon');
-      };
+        openScheduleModalSocEcon.onclick = function() {
+            openModal('scheduleModalSocEcon');
+        };
     }
-    if (scheduleModalSocEcon) {
-      const closeBtn = scheduleModalSocEcon.querySelector('.close');
-      if (closeBtn) {
-        closeBtn.onclick = () => closeModal('scheduleModalSocEcon');
-      }
+    if (closeScheduleModalSocEconSpan) {
+        closeScheduleModalSocEconSpan.onclick = function() {
+            closeModal('scheduleModalSocEcon');
+        };
     }
-    window.addEventListener('click', function(event) {
-      if (event.target === scheduleModalSocEcon) {
-        closeModal('scheduleModalSocEcon');
-      }
-    });
-  
-    // ==== Модалка для soc_hum ====
+    window.onclick = function(event) {
+        if (event.target === scheduleModalSocEcon) {
+            closeModal('scheduleModalSocEcon');
+        }
+    };
+
+    // Modal for timetable soc-hum
     const scheduleModalSocHum = document.getElementById('scheduleModalSocHum');
     const openScheduleModalSocHum = document.getElementById('openScheduleModalSocHum');
+    const closeScheduleModalSocHumSpan = scheduleModalSocHum ? scheduleModalSocHum.querySelector('.close') : null;
+
     if (openScheduleModalSocHum) {
-      openScheduleModalSocHum.onclick = function() {
-        openModal('scheduleModalSocHum');
-      };
+        openScheduleModalSocHum.onclick = function() {
+            openModal('scheduleModalSocHum');
+        };
     }
-    if (scheduleModalSocHum) {
-      const closeBtn = scheduleModalSocHum.querySelector('.close');
-      if (closeBtn) {
-        closeBtn.onclick = () => closeModal('scheduleModalSocHum');
-      }
+    if (closeScheduleModalSocHumSpan) {
+        closeScheduleModalSocHumSpan.onclick = function() {
+            closeModal('scheduleModalSocHum');
+        };
     }
-    window.addEventListener('click', function(event) {
-      if (event.target === scheduleModalSocHum) {
-        closeModal('scheduleModalSocHum');
-      }
-    });
-  });
+    window.onclick = function(event) {
+        if (event.target === scheduleModalSocHum) {
+            closeModal('scheduleModalSocHum');
+        }
+    };
+
+    // Form submit handling
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            alert('Форма отправлена!');
+            contactForm.reset();
+            closeModal('contactModal');
+        });
+    }
+});
