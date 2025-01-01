@@ -1,83 +1,117 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Физико-математическое - Гимназия №25</title>
-    <link rel="stylesheet" href="static/styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Физико-математическое - Гимназия №25</title>
+  <link rel="stylesheet" href="static/styles/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
 <header>
-    <nav>
-        <div class="container">
-            <div class="logo">
-                <img src="https://sun9-49.userapi.com/impf/QembUeIxPmd5MlqvKsqCyxhtFGuofbhA68owMw/AegFZ-a7NKY.jpg?size=604x405&quality=96&sign=42c72442c5aa0663aad340c47742cf4e&type=album" alt="Логотип гимназии" width="150">
-                <h1>МАОУ гимназия №25. Профориентация</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">Главная</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
-<section class="section">
+  <nav>
     <div class="container">
-        <h2>Физико-математическое направление</h2>
-        <p class="direction-description">
-            Физико-математический профиль позволяет добиться большего результата в обучении для учащихся, имеющих склонность к точным наукам.
-        </p>
-        <h3>Углубленные предметы</h3>
-        <ul class="subjects">
-            <li>Математика</li>
-            <li>Физика</li>
-            <li>Информатика</li>
-        </ul>
-        <h3>Возможные профессии</h3>
-        <ul class="professions">
-            <li>Инженер</li>
-            <li>IT-специалист</li>
-            <li>Архитектор</li>
-            <li>Строитель</li>
-            <li>Аналитик данных и др.</li>
-        </ul>
-        <button class="btn" id="openScheduleModalPhysMath">Посмотреть возможное расписание уроков</button>
-        <p class="contact-phone"><b>По вопросам об учебе на направлении:</b></p>
-        <p>   <a href="tel:+79180211597">+7 (918) 021-15-97</a> <span>Арман,</span></p>
-        <p>ученик 10-го физико-математического класса</p>
+      <div class="logo">
+        <img
+          src="https://sun9-49.userapi.com/impf/QembUeIxPmd5MlqvKsqCyxhtFGuofbhA68owMw/AegFZ-a7NKY.jpg?size=604x405&quality=96&sign=42c72442c5aa0663aad340c47742cf4e&type=album"
+          alt="Логотип гимназии"
+          width="150"
+        />
+        <h1>МАОУ гимназия №25. Профориентация</h1>
+      </div>
+      <!-- Гамбургер-меню -->
+      <div class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Главная</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
     </div>
+  </nav>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h2>Физико-математическое направление</h2>
+    <p class="direction-description">
+      Физико-математический профиль позволяет добиться большего результата в обучении
+      для учащихся, имеющих склонность к точным наукам.
+    </p>
+    <h3>Углубленные предметы</h3>
+    <ul class="subjects">
+      <li>Математика</li>
+      <li>Физика</li>
+      <li>Информатика</li>
+    </ul>
+
+    <h3>Возможные профессии</h3>
+    <ul class="professions">
+      <li>Инженер</li>
+      <li>IT-специалист</li>
+      <li>Архитектор</li>
+      <li>Строитель</li>
+      <li>Аналитик данных и др.</li>
+    </ul>
+
+    <button class="btn" id="openScheduleModalPhysMath">
+      Посмотреть возможное расписание уроков
+    </button>
+
+    <p class="contact-phone"><b>По вопросам об учебе на направлении:</b></p>
+    <p>
+      <a href="tel:+79180211597">+7 (918) 021-15-97</a>
+      <span>Арман, ученик 10-го физико-математического класса</span>
+    </p>
+  </div>
 </section>
 
 <!-- Модальное окно для расписания -->
 <div id="scheduleModalPhysMath" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Пример расписания уроков у 10 класса (группа 1)</h2>
-        <img src="https://i.postimg.cc/bvV5ngnB/image.jpg" alt="Пример расписания"  width="600">
-    </div>
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Пример расписания уроков</h2>
+    <img
+      src="https://i.postimg.cc/bvV5ngnB/image.jpg"
+      alt="Пример расписания"
+      width="600"
+    />
+  </div>
 </div>
 
 <section id="contacts" class="section">
-    <div class="container">
-        <h2>Контакты</h2>
-        <p class="contacts-text">Если у вас остались вопросы, свяжитесь с нами:</p>
-        <address>
-            <p><b>Адрес гимназии:</b> г. Краснодар, ул. Рашпилевская, д. 134</p>
-            <p><b>Телефон:</b> <a href="tel:+78612550261">+7 (861) 255-02-61</a></p>
-            <p><b>Email:</b> <a href="mailto:school25@kubannet.ru">school25@kubannet.ru</a></p>
-            <ul class="link-list">
-                <li> <b>Сайт гимназии:</b> <a href="https://school25.centerstart.ru" target="">https://school25.centerstart.ru</a></li>
-            </ul>
-        </address>
-    </div>
+  <div class="container">
+    <h2>Контакты</h2>
+    <p class="contacts-text">
+      Если у вас остались вопросы, свяжитесь с нами:
+    </p>
+    <address>
+      <p><b>Адрес гимназии:</b> г. Краснодар, ул. Рашпилевская, д. 134</p>
+      <p><b>Телефон:</b> <a href="tel:+78612550261">+7 (861) 255-02-61</a></p>
+      <p><b>Email:</b> <a href="mailto:school25@kubannet.ru">school25@kubannet.ru</a></p>
+      <ul class="link-list">
+        <li>
+          <b>Сайт гимназии:</b>
+          <a href="https://school25.centerstart.ru" target="_blank"
+            >https://school25.centerstart.ru</a
+          >
+        </li>
+      </ul>
+    </address>
+  </div>
 </section>
+
 <footer>
-    <div class="container">
-        <p>&copy; 2025 МАОУ Гимназия №25. Все права защищены.</p>
-    </div>
+  <div class="container">
+    <p>&copy; 2025 МАОУ Гимназия №25. Все права защищены.</p>
+  </div>
 </footer>
 
 <script src="static/js/core.js"></script>
