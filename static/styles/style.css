@@ -92,7 +92,7 @@ nav {
      max-width: 80%;
 }
 .hero-content h1 {
-    font-size: 3em;
+    font-size: 2em;
     color: #fff;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px #000;
@@ -105,7 +105,6 @@ nav {
 }
 
 .hero-image {
-    flex: 1;
     text-align: center;
 }
 .hero-image img{
