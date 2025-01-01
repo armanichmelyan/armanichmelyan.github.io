@@ -80,27 +80,30 @@ nav {
 #hero {
     background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
     padding: 60px 0; /* Меньше отступы сверху и снизу для мобильных */
+    margin-bottom: 30px
+    
 }
 
 #hero .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .hero-content {
-    flex: 1;
-    margin-right: 20px;
+    max-width: 50%;
 }
 .hero-content h1 {
-    font-size: 2em; /* Меньше размер шрифта заголовка для мобильных */
-    margin-bottom: 15px; /* Меньше отступ снизу для мобильных */
+    font-size: 3em; /* Меньше размер шрифта заголовка для мобильных */
+    color: #fff;
+    margin-bottom: 20px; /* Меньше отступ снизу для мобильных */
+    text-shadow: 2px 2px 4px #000;
 }
 .hero-subtitle {
-    font-size: 1em; /* Меньше размер шрифта подзаголовка для мобильных */
+    font-size: 1.2em; /* Меньше размер шрифта подзаголовка для мобильных */
+    color: #ccc;
+    margin-bottom: 30px;
     line-height: 1.5;
-    max-width: 80%;
 }
 
 .hero-image {
@@ -577,7 +580,7 @@ footer a:visited {
         margin-bottom: 30px;
     }
     .hero-image img {
-        width: 90%;
+        width: 80%;
     }
     .school-image img {
         width: 90%;
