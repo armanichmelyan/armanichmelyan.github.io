@@ -24,27 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = "none";
         }
     }
-    // Modal for contact form
-    const contactModal = document.getElementById('contactModal');
-    const openContactModalButton = document.getElementById('openContactModal');
-    const closeContactModalSpan = contactModal ? contactModal.querySelector('.close') : null;
-    if (openContactModalButton) {
-        openContactModalButton.onclick = function() {
-            openModal('contactModal');
-        }
-    }
-    if(closeContactModalSpan){
-        closeContactModalSpan.onclick = function() {
-            closeModal('contactModal');
-        }
-    }
-
-    window.onclick = function(event) {
-        if (event.target === contactModal) {
-            closeModal('contactModal');
-        }
-    }
-
     //Modal for timetable phys-math
     const scheduleModalPhysMath = document.getElementById('scheduleModalPhysMath');
     const openScheduleModalPhysMath = document.getElementById('openScheduleModalPhysMath');
@@ -125,16 +104,5 @@ document.addEventListener('DOMContentLoaded', function() {
         if (event.target === scheduleModalSocHum) {
             closeModal('scheduleModalSocHum');
         }
-    }
-
-    // Form submit handling
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-            alert('Форма отправлена!');
-            contactForm.reset();
-            closeModal('contactModal');
-        });
     }
 });
